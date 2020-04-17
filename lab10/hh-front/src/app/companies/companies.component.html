@@ -1,0 +1,13 @@
+
+<ul class="cards">
+  <li *ngFor="let company of companies" class="cards__item">
+    <div class="card">
+      <div class="card__image card__image--fence"></div>
+      <div class="card__content">
+        <div class="card__title">{{company.name}}</div>
+        <p class="card__text">{{company.description}}</p>
+        <button [routerLink]="['/companies', company.id]" class="btn btn--block card__btn">Vacancies</button>
+      </div>
+    </div>
+  </li>
+</ul>
